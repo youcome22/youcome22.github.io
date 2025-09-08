@@ -1,0 +1,45 @@
+/* 设置统计栏隐藏 */
+/* .site-data {
+  display: none !important;
+} */
+
+/* 实现导航栏的目录居中显示 */
+@media screen and (min-width: 768px) { /* 仅在桌面端应用，移动端通常使用汉堡菜单 */
+  #nav {
+    display: flex;
+    justify-content: space-between; /* 左右两侧元素分别贴边 */
+    align-items: center;
+    position: relative;
+  }
+  
+  #nav #menus {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* 使用 transform 进行精确的50%偏移校正 */
+    z-index: 1; /* 确保菜单显示在上层 */
+  }
+  
+  /* 确保左右两侧的容器有足够的宽度，避免被居中后的菜单重叠，并保持可点击 */
+  #nav #blog_name,
+  #nav #nav-right {
+    z-index: 2; /* 确保它们显示在菜单上层（如有需要） */
+    position: relative;
+    flex-shrink: 0; /* 防止被压缩 */
+  }
+  
+  /* 可选：如果居中的菜单项较多，可能需要微调左侧 Logo 或右侧图标的宽度或外边距 */
+  #nav #blog_name {
+    margin-right: auto;
+  }
+  #nav #nav-right {
+    margin-left: auto;
+  }
+}
+
+
+
+/* 页脚所有文字 */
+#footer, 
+#footer * {
+  color: #000 !important;         /* 黑色 */
+}

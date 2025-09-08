@@ -1,0 +1,101 @@
+/* 隐藏统计信息 */
+/* .site-data {
+  display: none !important;
+} */
+
+/* 导航栏居中 */
+@media (min-width: 768px) {
+  #nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #nav .menus_items {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  #nav #nav-left,
+  #nav #nav-right {
+    flex: 1;
+  }
+  
+  #nav #nav-right {
+    justify-content: flex-end;
+  }
+}
+
+/* 移动设备保持原样 */
+@media (max-width: 767px) {
+  #nav .menus_items {
+    position: static;
+    left: auto;
+    transform: none;
+    display: block;
+  }
+  
+  #nav #nav-right {
+    position: static;
+  }
+}
+
+/* 导航栏高度修复 */
+#nav {
+  /* 重置高度 */
+  height: auto !important;
+  min-height: 60px; /* 主题默认高度 */
+  
+  /* 布局设置 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  
+  /* 防止意外效果 */
+  overflow: visible;
+  position: relative;
+}
+
+/* 菜单项容器 */
+#nav .menus_items {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  height: auto;
+  align-items: center;
+}
+
+/* 左右侧容器 */
+#nav #nav-left,
+#nav #nav-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  z-index: 10; /* 确保在菜单上方 */
+}
+
+/* 单个菜单项 */
+#nav .menus_item {
+  height: auto;
+  margin: 0 10px;
+  padding: 5px 0;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  #nav {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  #nav .menus_items {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    width: 100%;
+  }
+}
