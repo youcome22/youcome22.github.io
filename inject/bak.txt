@@ -21,16 +21,4 @@
   display: flex !important;
 }
 
-#footer {
-  background: transparent !important; /* 透明，跟随 body 背景 */
-  box-shadow: none !important;        /* 去掉常规阴影 */
-  border-top: none !important;        /* 去掉边框 */
-}
-
-/* 去掉页脚的伪元素阴影/遮罩 */
-#footer::before,
-#footer::after {
-  display: none !important;
-  background: none !important;
-  box-shadow: none !important;
-}
+git remote set-url origin https://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@github.com/youcome22/repo.git
